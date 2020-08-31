@@ -1,23 +1,29 @@
-# Hello world docker action
-
-This action prints "Hello World" to the log or "Hello" + the name of a person to greet. To learn how this action was built, see "[Creating a Docker container action](https://help.github.com/en/articles/creating-a-docker-container-action)" in the GitHub Help documentation.
+# Codegen docker action
 
 ## Inputs
 
-### `who-to-greet`
+### `i`
 
-**Required** The name of the person to greet. Default `"World"`.
+Location of input openapi3 specification
+
+## Generator
+
+### `g`
+
+Generator template
 
 ## Outputs
 
-### `time`
+### `o`
 
-The time we greeted you.
+Output directory
 
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-docker-action@master
+uses: actions/codegen-docker-action@master
 with:
-  who-to-greet: 'Mona the Octocat'
+  i:    'swagger/api.yml'
+  g:    'typescript-express-server'
+  o:    'generated/server'
 ```
