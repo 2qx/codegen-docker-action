@@ -2,9 +2,6 @@
 
 set -euo pipefail
 
-ls
-pwd
-ls /github/workspace/
 
 # GEN_DIR allows to share the entrypoint between Dockerfile and run-in-docker.sh (backward compatible)
 GEN_DIR=${GEN_DIR:-/opt/openapi-generator}
