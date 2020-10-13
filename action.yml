@@ -2,4 +2,4 @@ name: 'Openapi Generator Cli'
 description: 'Generate code from an api'
 runs:
   using: 'docker'
-  image: 'docker://2qxx/openapi-generator:ts'
+  image: 'docker://2qxx/openapi-generator'
